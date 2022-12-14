@@ -6,6 +6,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            userInput: "",
             tasks:[
                 {
                     text: "Quarterly Newsletter",
@@ -56,7 +57,22 @@ createApp({
                 this.tasks.splice(indexElemento,1);
             }
 
+        },
+        addNewElementAtList(element){
+
+        
+                
+            this.tasks.push(
+                {
+                    text: element,
+                    done: false
+                }
+            );
+                
+            
+
         }
+
 
 
 

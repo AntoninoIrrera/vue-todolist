@@ -20,7 +20,10 @@
                 <div class="col-12 mt-5">
                     <h2>Lista:</h2>
                 </div>
-                <div class="col-12"></div>
+                <div class="col-12 text-center my-3">
+                    <input type="text" v-model="userInput">
+                    <a href="#" class="btn btn-primary ms-3" @click="addNewElementAtList(userInput)">Invio</a>
+                </div>
                 <div class="col-12 mt-3 ms-5">
                     <ul v-if="tasks.length > 0" class="list-unstyled border-3 border border-success w-50">
                         <li v-for="task,index in tasks" class="d-flex align-items-center justify-content-between p-2 border-3 border border-success">
