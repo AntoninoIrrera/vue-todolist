@@ -47,6 +47,19 @@ createApp({
         }
     },
     methods: {
-    
+        removeElementFromList(element,indice){
+
+
+            const indexElemento = this.tasks[indice].text.indexOf(element);
+
+            if(indexElemento > -1){
+                this.tasks.splice(indexElemento,1);
+            }
+
+        }
+
+
+
     }
 }).mount("#app")
+
