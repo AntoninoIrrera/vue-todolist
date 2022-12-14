@@ -69,11 +69,20 @@ createApp({
                 }
             );
             
-           
+
+        },
+        changeDoneState(element,indice){
 
 
+            if(element == true){
 
-            
+                this.tasks[indice].done = false;
+
+            }else{
+
+                this.tasks[indice].done = true;
+
+            }
 
         }
 
