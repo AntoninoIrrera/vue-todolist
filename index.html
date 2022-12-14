@@ -21,7 +21,7 @@
                     <h2>Lista:</h2>
                 </div>
                 <div class="col-12 text-center my-3">
-                    <input type="text" v-model="userInput">
+                    <input type="text" v-model="userInput" @keyup.enter="addNewElementAtList(userInput)">
                     <a href="#" class="btn btn-primary ms-3" @click="addNewElementAtList(userInput)">Invio</a>
                 </div>
                 <div class="col-12 mt-3 ms-5">
