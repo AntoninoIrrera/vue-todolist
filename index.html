@@ -26,9 +26,9 @@
                 </div>
                 <div class="col-12 mt-3 ms-5">
                     <ul v-if="tasks.length > 0" class="list-unstyled border-3 border border-success w-50">
-                        <li v-for="task,index in tasks" class="d-flex align-items-center justify-content-between p-2 border-3 border border-success">
+                        <li v-for="(task, index) in tasks" class="d-flex align-items-center justify-content-between p-2 border-3 border border-success">
                             <p :class="(task.done == true) ? `text-decoration-line-through` : `` " class="w-100">{{task.text}}</p>
-                            <p @click="removeElementFromList(task.text, index)" class="fs-1"><span class="border border-danger border-3 rounded-circle pe-2 ps-2 pb-2 bg-info">x</span></p>
+                            <p @click="removeElementFromList(task.text, index)" class="fs-1"><span class="border border-danger border-3 rounded-circle pe-2 ps-2 pb-2">x</span></p>
                         </li>
                     </ul>
                     <h2 v-else>La lista è vuota</h2>

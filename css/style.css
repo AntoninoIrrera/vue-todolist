@@ -3,3 +3,14 @@
 p.fs-1{
     cursor: pointer;
 }
+
+p.fs-1 span{
+    background-color: cyan;
+}
+
+p.fs-1:hover span{
+
+    background-color: red;
+
+
+}
