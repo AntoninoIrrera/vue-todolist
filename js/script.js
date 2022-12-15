@@ -60,15 +60,17 @@ createApp({
         },
         addNewElementAtList(element){
 
-        
-                
-            this.tasks.push(
-                {
-                    text: element,
-                    done: false
-                }
-            );
-            
+            if((!this.tasks.some(item => item.text === element))){
+               
+                this.tasks.push(
+                   {
+                       text: element,
+                       done: false
+                    }
+                    );
+                this.clearInput();
+                    
+            }
 
         },
         changeDoneState(element,indice){
@@ -84,6 +86,9 @@ createApp({
 
             }
 
+        },
+        clearInput(){
+            this.userInput = "";
         }
 
 
@@ -91,4 +96,3 @@ createApp({
 
     }
 }).mount("#app")
-
