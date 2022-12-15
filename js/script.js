@@ -60,7 +60,7 @@ createApp({
         },
         addNewElementAtList(element){
 
-            if((!this.tasks.some(item => item.text === element))){
+            if((!this.tasks.some(task => task.text === element))){
                
                 this.tasks.push(
                    {
